@@ -1,0 +1,94 @@
+:root {
+  --bg: #0a0a0a;
+  --text: #f8f8f8;
+  --accent: #ffd700;
+  --accent-dark: #e6b800;
+  --card: #111111;
+  --border: rgba(255, 255, 255, 0.08);
+  --gray: #aaaaaa;
+}
+
+.privacy-page {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 140px 5vw 80px;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-container h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.last-updated {
+  text-align: center;
+  color: var(--gray);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.privacy-container h2 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin: 3rem 0 1.2rem;
+  font-weight: 700;
+}
+
+.privacy-container p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
+  color: #ddd;
+}
+
+.privacy-container ul {
+  padding-left: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.privacy-container ul li {
+  margin-bottom: 0.9rem;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+.privacy-container strong {
+  color: var(--accent);
+}
+
+.thank-you {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--gray);
+  margin-top: 4rem;
+  font-style: italic;
+}
+
+ 
+@media (max-width: 768px) {
+  .privacy-page {
+    padding: 120px 4vw 60px;
+  }
+
+  .privacy-container h1 {
+    font-size: 3.2rem;
+  }
+
+  .privacy-container h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-container h1 {
+    font-size: 2.8rem;
+  }
+}

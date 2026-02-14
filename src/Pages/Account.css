@@ -1,0 +1,466 @@
+:root {
+  --bg: #0a0a0a;
+  --text: #f8f8f8;
+  --accent: #ffd700;
+  --accent-dark: #e6b800;
+  --card: #111111;
+  --border: rgba(255, 255, 255, 0.08);
+  --red: #ff4d4d;
+  --gray: #aaaaaa;
+  --input-bg: #1a1a1a;
+  --input-border: #333;
+}
+
+.account-page {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.account-hero {
+  text-align: center;
+  padding: 5rem 5vw 3rem;
+}
+
+.account-hero h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.account-hero p {
+  font-size: 1.35rem;
+  color: #ddd;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.account-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 5vw 6rem;
+}
+
+.account-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.tabs {
+  display: flex;
+  background: var(--input-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  background: var(--accent);
+  color: #000;
+}
+
+.form-wrapper {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.signup-active {
+  transform: translateX(0);
+}
+
+.login-active {
+  transform: translateX(-50%);
+}
+
+.form-container {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.success-message h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.btn-shop-now {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-shop-now:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+}
+
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 1rem 1.2rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 1.05rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.15);
+}
+
+.input-error {
+  border-color: var(--red) !important;
+}
+
+.error-text {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.btn-create-account {
+  margin-top: 1.5rem;
+  padding: 1.1rem;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-create-account:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+}
+
+.btn-create-account:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 1.8rem;
+  color: #aaa;
+  font-size: 0.98rem;
+}
+
+.form-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .account-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .account-hero h1 {
+    font-size: 3.8rem;
+  }
+}
+
+
+:root {
+  --bg: #0a0a0a;
+  --text: #f8f8f8;
+  --accent: #ffd700;
+  --accent-dark: #e6b800;
+  --card: #111111;
+  --border: rgba(255, 255, 255, 0.08);
+  --red: #ff4d4d;
+  --gray: #aaaaaa;
+  --input-bg: #1a1a1a;
+  --input-border: #333;
+}
+
+.account-page {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.account-hero {
+  text-align: center;
+  padding: 5rem 5vw 3rem;
+}
+
+.account-hero h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.account-hero p {
+  font-size: 1.35rem;
+  color: #ddd;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.account-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 5vw 6rem;
+}
+
+.account-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.tabs {
+  display: flex;
+  background: var(--input-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  background: var(--accent);
+  color: #000;
+}
+
+.form-wrapper {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.signup-active {
+  transform: translateX(0);
+}
+
+.login-active {
+  transform: translateX(-50%);
+}
+
+.form-container {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.success-message h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.btn-shop-now {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-shop-now:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+}
+
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 1rem 1.2rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 1.05rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.15);
+}
+
+.input-error {
+  border-color: var(--red) !important;
+}
+
+.error-text {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.btn-create-account {
+  margin-top: 1.5rem;
+  padding: 1.1rem;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-create-account:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+}
+
+.btn-create-account:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 1.8rem;
+  color: #aaa;
+  font-size: 0.98rem;
+}
+
+.form-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .account-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .account-hero h1 {
+    font-size: 3.8rem;
+  }
+}

@@ -1,0 +1,148 @@
+:root {
+  --bg: #0a0a0a;
+  --text: #f8f8f8;
+  --accent: #ffd700;
+  --accent-dark: #e6b800;
+  --card: #111111;
+  --border: rgba(255, 255, 255, 0.08);
+  --gray: #aaaaaa;
+  --red: #ff4d4d;
+}
+
+.terms-page {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 140px 5vw 80px; 
+}
+
+.terms-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.terms-container h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+
+.last-updated {
+  text-align: center;
+  color: var(--gray);
+  font-size: 1.15rem;
+  margin-bottom: 3.5rem;
+  font-style: italic;
+}
+
+.terms-container section {
+  margin-bottom: 3rem;
+}
+
+.terms-container h2 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin: 2.5rem 0 1.2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.terms-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.terms-container p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
+  color: #ddd;
+}
+
+.terms-container ul {
+  padding-left: 1.8rem;
+  margin-bottom: 1.8rem;
+  list-style-type: disc;
+}
+
+.terms-container ul li {
+  margin-bottom: 0.9rem;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+.terms-container strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.terms-container a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.terms-container a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+.thank-you {
+  text-align: center;
+  font-size: 1.35rem;
+  color: var(--gray);
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .terms-page {
+    padding: 120px 4vw 60px;
+  }
+
+  .terms-container {
+    padding: 2.5rem 1.8rem;
+  }
+
+  .terms-container h1 {
+    font-size: 3.2rem;
+  }
+
+  .terms-container h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-container h1 {
+    font-size: 2.8rem;
+  }
+
+  .terms-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .terms-container {
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+  }
+}

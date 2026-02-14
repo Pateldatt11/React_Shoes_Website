@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+div[id] {
+  scroll-margin-top: 100px;     
+  scroll-snap-margin-top: 100px; 
+}
+
+
+.navbar.scrolled + section[id],
+.navbar.scrolled + div[id] {
+  scroll-margin-top: 80px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}

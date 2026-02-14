@@ -1,0 +1,253 @@
+:root {
+  --bg: #0a0a0a;
+  --text: #f8f8f8;
+  --accent: #ffd700;
+  --accent-dark: #e6b800;
+  --gray: #aaaaaa;
+  --border: rgba(255, 255, 255, 0.07);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 5vw;
+
+  background: var(--bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+
+  transition: all 0.35s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.9rem 5vw;
+  background: rgba(10, 10, 10, 0.94);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+.logo {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  background: linear-gradient(90deg, #ffffff, var(--accent) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  user-select: none;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.96rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -7px;
+  left: 50%;
+  background: var(--accent);
+  transition: width 0.35s ease, left 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--accent);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 65%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
+
+.action-btn:hover {
+  color: var(--accent);
+  background: rgba(255, 215, 0, 0.09);
+  transform: scale(1.12);
+}
+
+.cta-button {
+  padding: 0.7rem 1.8rem;
+  font-weight: 600;
+  font-size: 0.94rem;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 18px rgba(255, 215, 0, 0.28);
+}
+
+.cta-button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 340px;
+  height: 100%;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 1.8rem 2rem;
+}
+
+.mobile-menu.active .mobile-menu-content {
+  transform: translateX(0);
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.mobile-links li {
+  margin: 1.4rem 0;
+}
+
+.mobile-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobile-links a:hover {
+  color: var(--accent);
+}
+
+.mobile-actions {
+  margin-top: 2rem;
+}
+
+.mobile-cta {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent);
+  color: black;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .cta-button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-actions {
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 6vw;
+  }
+}
