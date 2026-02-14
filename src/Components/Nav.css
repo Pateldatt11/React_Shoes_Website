@@ -91,6 +91,15 @@
   align-items: center;
   gap: 1.4rem;
 }
+.action-btn{
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
 
 .action-btn {
   background: none;
