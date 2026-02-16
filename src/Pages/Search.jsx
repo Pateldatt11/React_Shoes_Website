@@ -2,13 +2,27 @@ import React, { useState } from 'react';
 import './Search.css';
 
 const allSneakers = [
-  { id: 1, name: "Nike Air Max Pulse '26", brand: "Nike", price: 14999, size: [40, 41, 42, 43], img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc184e?w=800" },
-  { id: 2, name: "Air Jordan 1 Retro High OG", brand: "Jordan", price: 18999, size: [40, 42, 44], img: "https://images.unsplash.com/photo-1606107555044-0a8d2697c2d6?w=800" },
-  { id: 3, name: "Adidas Samba OG", brand: "Adidas", price: 11499, size: [39, 41, 43], img: "https://images.unsplash.com/photo-1606890658317-7d14490b76fd?w=800" },
-  { id: 4, name: "New Balance 550", brand: "New Balance", price: 12799, size: [40, 42], img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc184e?w=800" },
-  { id: 5, name: "Puma Speedcat OG", brand: "Puma", price: 10999, size: [41, 43, 44], img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800" },
-  { id: 6, name: "Nike Cortez Classic", brand: "Nike", price: 9499, size: [39, 40, 42], img: "https://images.unsplash.com/photo-1606107555044-0a8d2697c2d6?w=800" },
-  { id: 7, name: "Yeezy 700 V3", brand: "Yeezy", price: 24999, size: [41, 42, 44], img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800" },
+  { id: 1, name: "Nike Air Max Pulse '26", brand: "Nike", price: 14999, size: [40, 41, 42, 43], img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRdYK3R3XfUXEk_VqIcgSKKQDLLiEZ59a7RJBM_snTQHZZYZMIsfM5TBBezz_c1eq2UPWYdVFwVLTItL_MtDdyq19FuYPAAwd0PEJ3Cz8NXKpqWMQx20QxTlA" },
+
+
+  { id: 2, name: "Air Jordan 1 Retro High OG", brand: "Jordan", price: 18999, size: [40, 42, 44], img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQxwc5Vccw-ha5Pr8DjDzrSz2aJ9DMkMZrHITlrkPDHXx05dhtnjvm6FS_YyUJyDjlMwSPeNF8D1dK_jkzyFP1jZt3JjKL3Z5OY92KzqVR_DTTQbb8S5tTR6w://images.unsplash.com/photo-1606107555044-0a8d2697c2d6?w=800" },
+
+
+  { id: 3, name: "Adidas Samba OG", brand: "Adidas", price: 11499, size: [39, 41, 43], img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRt1nILipdbhMOPDUelnCDjju9ifxoGmc5L4ROfV9WCkk0xRnudTa-ld9d6bV3uskMoJlbR5OfqlHGLgCAIYYUyp6ZSjEvdpzBuc-0qorJe2tvsZtVDgllEaQ" },
+
+
+  { id: 4, name: "New Balance 550", brand: "New Balance", price: 12799, size: [40, 42], img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxGPDAb5c1LQAhBN9wreFIPT3UG2hWZYF7FF8yaXv2nZ8m7RRn8OrKS_IYebh89KwB9IYLVHOTg63xjWYKbU9R0EvZvvp8ohorKShRvUr2ssnL95YPATjQ2w" },
+
+
+  { id: 5, name: "Puma Speedcat OG", brand: "Puma", price: 10999, size: [41, 43, 44], img: "https://images.vegnonveg.com/resized/1360X1600/11674/speedcat-og-puma-blackpuma-white-black-66e29982925bb.jpg?format=webp" },
+
+
+  { id: 6, name: "Nike Cortez Classic", brand: "Nike", price: 9499, size: [39, 40, 42], img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSqsWLu2Tqm0lTqU0Dt1VhPquRvesoF9q-Xmy1YftuNtbM7-HnKgoBd-3ViiJQJZA-1CJ6QT3RARI16L_DDowXcQq6nxPkLx2uvm5NAN5G1pCjHLP_xrPEKWw" },
+
+
+  { id: 7, name: "Yeezy 700 V3", brand: "Yeezy", price: 24999, size: [41, 42, 44], img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRxZLhxRVFnajGoxln7Ppn09Sv1XDojM-f46UY7D8pUTlPkTJ-IomnUF4jVpn57vk31DEbCFQzotEG2PzTHS2YXynBlGPZj" },
+
+
   
 ];
 
@@ -54,7 +68,7 @@ const Search = () => {
     .sort((a, b) => {
       if (sortBy === 'price-low') return a.price - b.price;
       if (sortBy === 'price-high') return b.price - a.price;
-      return 0; 
+      
     });
 
   return (
